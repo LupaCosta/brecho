@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@yield('title', config('app.name', 'Laravel'))</title>
 
     <!-- jQuery -->
@@ -27,7 +27,7 @@
         <div class="content-wrapper">
             <section class="content-header">
                 <div class="container-fluid">
-                    @yield('page-header') {{-- Se quiser títulos extras por página --}}
+                    @yield('page-header')
                 </div>
             </section>
 
@@ -38,10 +38,11 @@
             </section>
         </div>
     </div>
+
     <script>
-    $(function () {
-        $('.dropdown-toggle').dropdown();
-    });
-</script>
+        $(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
 </body>
 </html>
