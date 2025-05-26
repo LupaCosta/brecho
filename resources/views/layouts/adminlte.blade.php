@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Brechó</title>
+    <title>Brechó Manos e Manas</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
