@@ -31,7 +31,7 @@ class Produto extends Model
 
     public function estoque()
     {
-        return $this->hasOne(Estoque::class);
+        return $this->hasOne(\App\Models\Estoque::class, 'produto_id');
     }
 
     public function vendaItems()
