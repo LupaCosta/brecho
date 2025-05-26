@@ -9,6 +9,7 @@ use App\Http\Controllers\VendaController;
 use App\Http\Controllers\VendaItemController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CepController;
 
 // Rotas auth Breeze
 require __DIR__.'/auth.php';
@@ -36,6 +37,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('estoques', EstoqueController::class);
     Route::resource('vendas', VendaController::class);
     Route::resource('venda_items', VendaItemController::class);
+    Route::get('/cep/{cep}', [CepController::class, 'buscar']);
+    
 });
 
 // Rota home ou dashboard, pode ser algo simples

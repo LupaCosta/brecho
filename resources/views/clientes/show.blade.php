@@ -1,15 +1,20 @@
 @extends('layouts.app')
 
-@section('title', 'Detalhes do Cliente')
+@section('page-header')
+    <h1 class="m-0">Detalhes do Cliente</h1>
+@endsection
 
 @section('content')
-<div class="container-fluid">
-    <h1 class="mb-4">Cliente: {{ $cliente->nome }}</h1>
+    <div class="card">
+        <div class="card-body">
+            <p><strong>Nome:</strong> {{ $cliente->nome }}</p>
+            <p><strong>Telefone:</strong> {{ $cliente->telefone }}</p>
+            <p><strong>CEP:</strong> {{ $cliente->cep }}</p>
+            <p><strong>Endereço:</strong> {{ $cliente->endereco }}</p>
+            
 
-    <p><strong>Telefone:</strong> {{ $cliente->telefone ?? 'Não informado' }}</p>
-    <p><strong>Endereço:</strong> {{ $cliente->endereco ?? 'Não informado' }}</p>
-
-    <a href="{{ route('clientes.edit', $cliente->id) }}" class="btn btn-warning">Editar</a>
-    <a href="{{ route('clientes.index') }}" class="btn btn-secondary">Voltar</a>
-</div>
+            <a href="{{ route('clientes.edit', $cliente->id) }}" class="btn btn-warning">Editar</a>
+            <a href="{{ route('clientes.index') }}" class="btn btn-secondary">Voltar</a>
+        </div>
+    </div>
 @endsection

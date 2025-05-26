@@ -18,7 +18,9 @@
                     <tr>
                         <th>Nome</th>
                         <th>Telefone</th>
+                        <th>CEP</th>
                         <th>Endereço</th>
+                        
                         <th style="width: 180px;">Ações</th>
                     </tr>
                 </thead>
@@ -27,7 +29,9 @@
                     <tr>
                         <td>{{ $cliente->nome }}</td>
                         <td>{{ $cliente->telefone }}</td>
+                        <td>{{ $cliente->cep }}</td>
                         <td>{{ $cliente->endereco }}</td>
+                        
                         <td>
                             <a href="{{ route('clientes.show', $cliente->id) }}" class="btn btn-info btn-sm">
                                 <i class="fas fa-eye"></i>

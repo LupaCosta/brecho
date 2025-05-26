@@ -24,9 +24,11 @@ class ClienteController extends Controller
             'nome' => 'required|string|max:255',
             'telefone' => 'nullable|string|max:20',
             'endereco' => 'nullable|string|max:255',
+            'cep' => 'nullable|string|max:20', // opcional, mas tamanho fixo
+            
         ]);
 
-        Cliente::create($request->all());
+        Cliente::create($request->only(['nome', 'telefone', 'endereco', 'cep', ]));
 
         return redirect()->route('clientes.index')->with('success', 'Cliente criado com sucesso.');
     }
@@ -47,9 +49,11 @@ class ClienteController extends Controller
             'nome' => 'required|string|max:255',
             'telefone' => 'nullable|string|max:20',
             'endereco' => 'nullable|string|max:255',
+            'cep' => 'nullable|string|max:20',
+            
         ]);
 
-        $cliente->update($request->all());
+        $cliente->update($request->only(['nome', 'telefone', 'endereco', 'cep', 'bairro', 'cidade', 'uf']));
 
         return redirect()->route('clientes.index')->with('success', 'Cliente atualizado com sucesso.');
     }
